@@ -14,5 +14,6 @@ clean:
 git:
 	git add .
 	git commit
+	git push
 
 .PHONY: test clean git
