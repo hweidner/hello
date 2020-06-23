@@ -21,7 +21,15 @@ This command will install the program to ``~/go/bin/hello``, or
 ``$GOPATH/bin/hello`` if ``GOPATH`` is set. Then run it:
 
 	$ hello
-	Hello, Gophers
+	Hello, Gophers!
+    
+    Hello version: 0.3
+    Build date: 2020-02-04T01:23:35+01:00 
+    
+    Runtime information:
+    Go version: go1.13.7
+    Platform: linux/amd64
+    GOMAXPROCS: 16
 
 License
 -------
