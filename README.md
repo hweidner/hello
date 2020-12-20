@@ -1,7 +1,7 @@
 [![GoDoc](https://godoc.org/github.com/hweidner/hello?status.svg)](https://godoc.org/github.com/hweidner/hello)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hweidner/hello)](https://goreportcard.com/report/github.com/hweidner/hello)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Total alerts]https://img.shields.io/lgtm/alerts/g/hweidner/hello.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/hweidner/hello/alerts/)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/hweidner/hello.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/hweidner/hello/alerts/)
 
 hello
 =====
