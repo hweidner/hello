@@ -16,7 +16,9 @@ import (
 )
 
 var (
-	Version   = "(undefined)"
+	// Version contains the repository version, as reported by: git describe --always --dirty --tags
+	Version = "(undefined)"
+	// BuildDate is the date of the build in RFC3339 format.
 	BuildDate = "(undefined)"
 )
 
