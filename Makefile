@@ -1,3 +1,6 @@
+# Copyright 2019-2020, Harald Weidner and the hello contributors
+# SPDX-License-Identifier: MIT
+
 VERSION = $(shell git describe --always --dirty --tags)
 DATE = $(shell date -Iseconds)
 LDFLAGS = "-X main.Version=$(VERSION) -X main.BuildDate=$(DATE)"

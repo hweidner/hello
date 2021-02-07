@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![GoDocs](https://godocs.io/github.com/hweidner/hello?status.svg)](https://godocs.io/github.com/hweidner/hello)
 [![Go Reference](https://pkg.go.dev/badge/github.com/hweidner/hello.svg)](https://pkg.go.dev/github.com/hweidner/hello)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hweidner/hello)](https://goreportcard.com/report/github.com/hweidner/hello)
@@ -36,5 +36,5 @@ This command will install the program to ``~/go/bin/hello``, or
 License
 -------
 
-This software is released under the MIT license.
-
+This software is released under the MIT license. See the file [LICENSE](LICENSE)
+for a full text of the MIT license.

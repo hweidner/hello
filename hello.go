@@ -1,4 +1,4 @@
-// Copyright 2019 - 2020, Harald Weidner and the hello contributors
+// Copyright 2019-2020, Harald Weidner and the hello contributors
 // SPDX-License-Identifier: MIT
 
 /*
