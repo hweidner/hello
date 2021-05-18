@@ -4,20 +4,18 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/hweidner/hello)](https://goreportcard.com/report/github.com/hweidner/hello)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/hweidner/hello.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/hweidner/hello/alerts/)
 
-hello
-=====
+# hello
 
 Command hello greets you with a friendly message.
 
 This repository is just there to test the new Go developer site [go.dev](https://go.dev/).
 
-Installation
-------------
+## Installation
 
 You need a working Go environment on you system. Use ``sudo apt install golang``
 if you run a Debian or Ubuntu Linux system. Then install this repository by
 
-	go get github.com/hweidner/hello
+	$ go get github.com/hweidner/hello
 
 This command will install the program to ``~/go/bin/hello``, or
 ``$GOPATH/bin/hello`` if ``GOPATH`` is set. Then run it:
@@ -33,8 +31,7 @@ This command will install the program to ``~/go/bin/hello``, or
     Platform: linux/amd64
     GOMAXPROCS: 16
 
-License
--------
+## License
 
 This software is released under the MIT license. See the file [LICENSE](LICENSE)
 for a full text of the MIT license.
