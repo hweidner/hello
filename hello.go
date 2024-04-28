@@ -13,41 +13,72 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"runtime/debug"
 )
 
 var (
 	// Version contains the repository version, as reported by: git describe --always --dirty --tags
-	Version = "(undefined)"
-	// BuildDate is the date of the build in RFC3339 format.
-	BuildDate = "(undefined)"
+	Version = ""
 )
 
 func main() {
-	fmt.Println("Hello, Gophers!\n")
-	fmt.Println("Hello version:", Version)
-	fmt.Println("Build date:", BuildDate, "\n")
-
-	version := getVersion()
-	fmt.Println("Runtime information:")
-	fmt.Println(version)
+	fmt.Println("Hello, Gophers!")
+	fmt.Println()
+	if Version != "" {
+		fmt.Println("Git version:", Version)
+	}
+	runtimeInfo := getVersion()
+	fmt.Println(runtimeInfo)
 }
 
 type versionInfo struct {
-	goVersion    string
-	goos, goarch string
-	gomaxprocs   int
+	goVersion            string
+	goos, goarch         string
+	gomaxprocs           int
+	vcsrevision, vcstime string
 }
 
 func getVersion() *versionInfo {
+	revision, time := vcsRevision()
 	return &versionInfo{
-		goVersion:  runtime.Version(),
-		goos:       runtime.GOOS,
-		goarch:     runtime.GOARCH,
-		gomaxprocs: runtime.GOMAXPROCS(0),
+		goVersion:   runtime.Version(),
+		goos:        runtime.GOOS,
+		goarch:      runtime.GOARCH,
+		gomaxprocs:  runtime.GOMAXPROCS(0),
+		vcsrevision: revision,
+		vcstime:     time,
 	}
+
 }
 
 func (v *versionInfo) String() string {
-	return fmt.Sprintf("Go version: %s\nPlatform: %s/%s\nGOMAXPROCS: %d\n",
-		v.goVersion, v.goos, v.goarch, v.gomaxprocs)
+	format := `Go version:  %s
+Platform:    %s/%s
+GOMAXPROCS:  %d
+vcsRevision: %s
+vcsTime:     %s
+`
+
+	return fmt.Sprintf(format, v.goVersion, v.goos, v.goarch, v.gomaxprocs, v.vcsrevision, v.vcstime)
+}
+
+func vcsRevision() (revision, time string) {
+	modified := ""
+
+	if info, ok := debug.ReadBuildInfo(); ok {
+		for _, setting := range info.Settings {
+			switch setting.Key {
+			case "vcs.revision":
+				revision = setting.Value
+			case "vcs.time":
+				time = setting.Value
+			case "vcs.modified":
+				modified = setting.Value
+			}
+		}
+	}
+	if modified == "true" {
+		time = time + " (modified)"
+	}
+	return
 }

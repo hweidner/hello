@@ -2,21 +2,16 @@
 # SPDX-License-Identifier: MIT
 
 VERSION = $(shell git describe --always --dirty --tags)
-DATE = $(shell date -Iseconds)
-LDFLAGS = "-X main.Version=$(VERSION) -X main.BuildDate=$(DATE)"
+GOFLAGS = -trimpath
+LDFLAGS = -X main.Version=$(VERSION)
 
 hello: hello.go
-	go build -ldflags $(LDFLAGS)
+	go build $(GOFLAGS) -ldflags "$(LDFLAGS)"
 
-test: hello
+run: hello
 	./hello
 
 clean:
 	rm -f hello *~
 
-git:
-	git add .
-	git commit
-	git push
-
-.PHONY: test clean git
+.PHONY: run clean
