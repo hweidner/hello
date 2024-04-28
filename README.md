@@ -2,7 +2,6 @@
 [![GoDocs](https://godocs.io/github.com/hweidner/hello?status.svg)](https://godocs.io/github.com/hweidner/hello)
 [![Go Reference](https://pkg.go.dev/badge/github.com/hweidner/hello.svg)](https://pkg.go.dev/github.com/hweidner/hello)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hweidner/hello)](https://goreportcard.com/report/github.com/hweidner/hello)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/hweidner/hello.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/hweidner/hello/alerts/)
 
 # hello
 
@@ -20,16 +19,20 @@ if you run a Debian or Ubuntu Linux system. Then install this repository by
 This command will install the program to ``~/go/bin/hello``, or
 ``$GOPATH/bin/hello`` if ``GOPATH`` is set. Then run it:
 
-	$ hello
-	Hello, Gophers!
-    
-    Hello version: 0.3
-    Build date: 2020-02-04T01:23:35+01:00 
-    
-    Runtime information:
-    Go version: go1.13.7
-    Platform: linux/amd64
-    GOMAXPROCS: 16
+Alernatively, pull the repository and execute `make`.
+
+When executed, the program prints a message like this. Note that the `Git version` line is only
+printed if the program was compiled using `make`.
+
+    $ ./hello
+    Hello, Gophers!
+
+    Git version: v0.5.0-1-ga451f73-dirty
+    Go version:  go1.22.2
+    Platform:    linux/amd64
+    GOMAXPROCS:  16
+    vcsRevision: a451f735655f4507ceea6beed1dd3ae594e4f930
+    vcsTime:     2024-04-28T01:24:48Z (modified)
 
 ## License
 
