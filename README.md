@@ -2,12 +2,14 @@
 [![GoDocs](https://godocs.io/github.com/hweidner/hello?status.svg)](https://godocs.io/github.com/hweidner/hello)
 [![Go Reference](https://pkg.go.dev/badge/github.com/hweidner/hello.svg)](https://pkg.go.dev/github.com/hweidner/hello)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hweidner/hello)](https://goreportcard.com/report/github.com/hweidner/hello)
+[![Scc Count Badge](https://sloc.xyz/github/hweidner/hello)](https://github.com/hweidner/hello)
 
 # hello
 
 Command hello greets you with a friendly message.
 
-This repository is just there to test the new Go developer site [go.dev](https://go.dev/).
+This repository is just there to test the new Go developer site [go.dev](https://go.dev/),
+some Github features, badges, and the like.
 
 ## Installation
 
